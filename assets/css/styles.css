@@ -540,14 +540,16 @@ a {
     margin-top: 40px;
 }
 .footer .social .link {
-    margin-right: 10px;
     display: flex;
     width: 28.5px;
     height: 28.5px;
     align-items: center;
     justify-content: center;
     background: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 3px;
+}
+.footer .social .link + .link {
+    margin-left: 16px;
 }
 .footer .social .link:hover {
     background: #ccc;
