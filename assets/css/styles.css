@@ -23,9 +23,12 @@ body {
     font-size: 1.4rem;
     text-align: center;
     color: #ffffff;
+    transition: background 0.3s;
 }
 .btn:hover {
     opacity: 0.9;
+    background: #000;
+    font-weight: 600;
 }
 a {
     text-decoration: none;
@@ -47,7 +50,7 @@ a {
 .header {
     position: relative;
     background: #e6f0ff;
-    height: 736px;
+    height: 100vh;
 }
 .navbar {
     display: flex;
@@ -66,8 +69,11 @@ a {
     font-weight: 500;
     color: #4f5361;
     padding: 8px 14px;
+    transition: transform 0.5s ease;
 }
-.navbar ul a:hover {
+.navbar ul li:hover {
+    transform: scale(1.2);
+    color: #000;
     text-decoration: underline;
 }
 .navbar .actions-link {
@@ -138,9 +144,18 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.cilient .images img {
     margin-top: 70px;
+}
+.cilient .images a {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 91px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.cilient .images a:hover {
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 /* ===========duides=========== */
 .guides {
