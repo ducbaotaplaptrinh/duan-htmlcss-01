@@ -5,6 +5,10 @@
 :root {
     --primary-color: #0f1b4c;
 }
+html,
+body {
+    scroll-behavior: smooth;
+}
 html {
     font-size: 62.5%;
 }
@@ -23,12 +27,11 @@ body {
     font-size: 1.4rem;
     text-align: center;
     color: #ffffff;
-    transition: background 0.3s;
+    transition: background 0.5s, transform 0.5s ease;
 }
 .btn:hover {
-    opacity: 0.9;
     background: #000;
-    font-weight: 600;
+    transform: scale(1.1);
 }
 a {
     text-decoration: none;
@@ -58,6 +61,7 @@ a {
 .hero-wrap {
     display: flex;
     position: relative;
+    justify-content: center;
     flex-direction: column;
     background: #e6f0ff;
     height: 100vh;
@@ -75,30 +79,34 @@ a {
     margin-left: auto;
 }
 .navbar ul a {
+    display: inline-block;
     font-size: 1.4rem;
     font-weight: 500;
     color: #4f5361;
     padding: 8px 14px;
     transition: transform 0.5s ease;
 }
-.navbar ul li:hover {
+.navbar ul a:hover {
     transform: scale(1.2);
     color: #000;
     text-decoration: underline;
 }
 .navbar .actions-link {
+    display: inline-block;
     font-weight: 500;
     line-height: 21px;
     color: var(--primary-color);
+    transition: transform 0.5s ease;
+}
+.navbar .actions-link:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
 }
 
 .navbar .action-btn {
     padding: 13px 16px;
     margin-left: 18px;
     border-radius: 8px;
-}
-.hero {
-    padding-top: 130px;
 }
 .hero .sub-title {
     color: #687690;
@@ -487,6 +495,10 @@ a {
     width: 151px;
     height: 50px;
     background: #fff;
+    transition: color 0.5 ease;
+}
+.subcription .btn:hover {
+    color: red;
 }
 .subcription .info {
     padding: 0 80px;
